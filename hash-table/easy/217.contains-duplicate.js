@@ -9,18 +9,17 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
-    var hashObj = {};
+var containsDuplicate = function (nums) {
+    const hashTable = {};
 
-    for(var i = 0; i < nums.length; i++) {
-        if(hashObj[nums[i]] !== undefined) {
+    for (var i = 0; i < nums.length; i++) {
+        if (hashTable[nums[i]] !== undefined) {
             return true;
-        }else {
-            hashObj[nums[i]] = true;
+        } else {
+            hashTable[nums[i]] = true;
         }
     }
 
     return false;
 };
 // @lc code=end
-
